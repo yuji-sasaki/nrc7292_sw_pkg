@@ -32,9 +32,9 @@
 
 /*
  * README This is a temporary feature.
- * Use only NRC7392
+ * Use only NRC7392 & NRC4791
  */
-#define CONFIG_CHECK_READY
+/* #define CONFIG_CHECK_READY */
 
 /*
  * README This is a temporary feature.

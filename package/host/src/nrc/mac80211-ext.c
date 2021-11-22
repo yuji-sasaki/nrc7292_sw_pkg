@@ -149,7 +149,9 @@ struct sk_buff *ieee80211_deauth_get(struct ieee80211_hw *hw,
 			status = IEEE80211_SKB_RXCB(skb);
 			status->flag |= RX_FLAG_DECRYPTED;
 			status->flag |= RX_FLAG_MMIC_STRIPPED;
+#if KERNEL_VERSION(4, 3, 0) <= NRC_TARGET_KERNEL_VERSION
 			status->flag |= RX_FLAG_PN_VALIDATED;
+#endif
 		}
 	} else {
 		deauth->u.deauth.reason_code = reason;
